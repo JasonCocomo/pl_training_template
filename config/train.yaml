@@ -22,5 +22,5 @@ data:
       target: data.rp_dataset.RPDataset
       params:
         input_dirs:
-          - /data/training/deepnude_dataset/femjoyhunter/raw_imgs
+          - /data/training/raw_imgs
         image_size: 512
