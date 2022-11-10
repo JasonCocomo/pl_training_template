@@ -1,0 +1,9 @@
+__pycache__
+**/__pycache__
+lightning_logs/
+logs/
+outputs/
+samples/
+images/
+src/
+train.log

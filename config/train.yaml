@@ -1,0 +1,26 @@
+model:
+  target: cores.rpcore.RPCore
+  params:
+    learning_rate: 1e-4
+    rpnet_config:
+    use_half: false
+
+lightning:
+  trainer:
+    strategy: "ddp"
+    accelerator: "gpu"
+    devices: 1
+    num_sanity_val_steps: 0
+
+data:
+  target: data.dataset_init.DataModuleFromConfig
+  params:
+    batch_size: 8
+    num_workers: 8
+    wrap: False
+    train:
+      target: data.rp_dataset.RPDataset
+      params:
+        input_dirs:
+          - /data/training/deepnude_dataset/femjoyhunter-normal-1024-naked/raw_imgs
+        image_size: 512
