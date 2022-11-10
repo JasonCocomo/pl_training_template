@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=1 python -m repair.train --gpus "0,"
+CUDA_VISIBLE_DEVICES=1 python train.py --gpus "0,"
